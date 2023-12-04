@@ -28,6 +28,7 @@ class Request{
 
 
     }
+    
     post(url,data,callback){
         this.xhr.open("POST",url);
         this.xhr.setRequestHeader("Content-type","application/json"); // JSON Verisi
@@ -95,55 +96,60 @@ class Request{
 }
 
 const request = new Request();
+/*
+ request.get("https://jsonplaceholder.typicode.com/albums/100",function(err,response){
+     if (err === null){
+         // Başarılı
+         console.log(response);
+     }
+    else {
+        // Hata
+        console.log(err); 
+     }
 
-// request.get("https://jsonplaceholder.typicode.com/albums",function(err,response){
-//     if (err === null){
+ });
+ */
+ request.get("https://jsonplaceholder.typicode.com/albums/",function(err,response){
+     if (err === null){
 //         // Başarılı
-//         console.log(response);
-//     }
-//     else {
+         console.log(response);
+     }
+     else {
 //        // Hata
-//        console.log(err); 
-//     }
+        console.log(err); 
+     }
 
-// });
-// request.get("https://jsonplaceholder.typicode.com/albums/51",function(err,response){
-//     if (err === null){
-//         // Başarılı
-//         console.log(response);
-//     }
-//     else {
-//        // Hata
-//        console.log(err); 
-//     }
+     });
 
-// });
+    
+ request.post("https://jsonplaceholder.typicode.com/albums",{userId:2,title:"Thriller"},function(err,album){
 
-// request.post("https://jsonplaceholder.typicode.com/albums",{userId:2,title:"Thriller"},function(err,album){
-
-//     if (err === null){
-//         console.log(album);
-//     }
-//     else {
+     if (err === null){
+         console.log(album);
+     }
+     else {
 //         // Hata
-//         console.log(err);
-//     }
+         console.log(err);
+     }
 
 
-// })
+ })
+ 
+/*
+ request.put("https://jsonplaceholder.typicode.com/albums/10",{userId:143,title:"Tarkan Karma"},function(err,album){
 
-// request.put("https://jsonplaceholder.typicode.com/albums/10",{userId:143,title:"Tarkan Karma"},function(err,album){
-
-//     if (err === null){
-//         console.log(album);
-//     }
-//     else {
+     if (err === null){
+         console.log(album);
+     }
+     else {
 //         // Hata
-//         console.log(err);
-//     }
+         console.log(err);
+     }
 
 
-// })
+ })
+*/
+/*
 request.delete("https://jsonplaceholder.typicode.com/albums/10",function(err,response){
     if (err === null){
         // Başarılı
@@ -154,4 +160,7 @@ request.delete("https://jsonplaceholder.typicode.com/albums/10",function(err,res
        console.log(err); 
     }
 
+
+    
 });
+*/
