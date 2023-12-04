@@ -1,3 +1,4 @@
+/* */
 class Request {
 
     get(url){ // Get Request
@@ -65,12 +66,12 @@ class Request {
 }
 const request = new Request();
 
-// request.get("https://jsonplaceholder.typicode.com/albums")
-// .then(albums => {
+ request.get("https://jsonplaceholder.typicode.com/albums")
+ .then(albums => {
     
-//     console.log(albums);
-// })
-// .catch(err => console.log(err));
+     console.log(albums);
+ })
+ .catch(err => console.log(err));
 
 // request.post("https://jsonplaceholder.typicode.com/albums",{userId:1,title:"Thriller"})
 // .then(newAlbum => console.log(newAlbum))
@@ -90,6 +91,6 @@ const request = new Request();
 
 
 
+/*
 
-
-
+*/

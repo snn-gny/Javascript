@@ -17,13 +17,20 @@ function getExternalAPI(){
     fetch("https://api.exchangeratesapi.io/latest")
     .then(response => response.json())
     .then(data => {
-        console.log(data.rates.TRY);
+        /*console.log(data); // API yanıtını logla
+        console.log(data.rates.USD);*/
+        if (data && data.rates && data.rates.USD) {
+            console.log(data.rates.USD);
+        } else {
+            console.log("Beklenen veri bulunamadı.");
+        }
     })
+
     .catch(err => console.log(err));
 }
 // getTextFile();
 // getJsonFile();
-// getExternalAPI();
+ getExternalAPI();
 
 // https://api.exchangeratesapi.io/latest
 
