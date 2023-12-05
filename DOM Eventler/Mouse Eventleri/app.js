@@ -49,16 +49,37 @@ function run(e){
     console.log(e.type);
     //console.log(e.target);
 }
-
+*/
 // Mouse Out Event  => Mouse 'un üzerinden ayrilinca olusur
 
 title.addEventListener("mouseout",run);
+let counterr =0;
 
 function run(e){
+    counterr++;
+    if(title.addEventListener("mouseout",run) >=2){
+        document.getElementById("filter").style.backgroundcolor = 'blue';
+    
     console.log(e.type);
     //console.log(e.target);
 }
+}
 
+// mouseover ile filter arkaplan degistirme
+let mouseOverCount = 0;
+
+title.addEventListener("mouseover", () => {
+    mouseOverCount++;
+    if (mouseOverCount >= 2) {
+        document.getElementById("filter").style.backgroundColor = 'yellow';
+    }
+});
+
+title.addEventListener("mouseout", (e) => {
+    console.log(e.type);
+    // console.log(e.target);
+});
+/*
 // Mouse Over - Out birden cok öge barindiran yerde yapilirsa ögeler arasi  geciste  mouseover ve mouseout olur
 
 cardBody.addEventListener("mouseover",run);

@@ -36,7 +36,8 @@ console.log("................................................");
 const elements = document.querySelectorAll(".list-group-item");
 elements.forEach(function(el){
     el.style.color ="red";
-    el.style.background ="#f2f2f2";
+    el.style.background ="#f1f1f1";
+
 })
 console.log(elements);
 console.log("................................................");
@@ -61,3 +62,4 @@ element2.forEach(function(el){
     el.style.color ="red";
     el.style.background ="#ccc";
 })
+
